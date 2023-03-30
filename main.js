@@ -32,7 +32,7 @@ function ndvilayer() {
     startdate = document.getElementById('startdate').value;
     enddate = document.getElementById('enddate').value;
     
-    var SHUB_INSTANCE_ID = "Enter ID"; // I am not mentioning the code because of credentials privacy.  
+    var SHUB_INSTANCE_ID = "Enter_ID"; // I am not mentioning the credentials because of privacy.  
 
       nadvi_layer = new ol.layer.Tile({
         source: new ol.source.TileWMS({
