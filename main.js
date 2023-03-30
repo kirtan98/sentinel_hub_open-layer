@@ -1,5 +1,4 @@
 var vectorsource = new ol.source.Vector({wrapX: false});
-
 var vectorlayer = new ol.layer.Vector({
   source: vectorsource
 });
@@ -33,13 +32,13 @@ function ndvilayer() {
     startdate = document.getElementById('startdate').value;
     enddate = document.getElementById('enddate').value;
     
-    var SHUB_INSTANCE_ID = "Enter ID"; //As per the API documentation here, I am not mentioning the code because of credentials privacy.  
+    var SHUB_INSTANCE_ID = "Enter ID"; // I am not mentioning the code because of credentials privacy.  
 
       nadvi_layer = new ol.layer.Tile({
         source: new ol.source.TileWMS({
         url: `https://services.sentinel-hub.com/ogc/wms/${SHUB_INSTANCE_ID}`,
         params: {
-            "LAYERS": "Layer Name",
+            "LAYERS": "Layer Name", // Layer name form Configure utility
             "FORMAT": "image/png",
             "TRANSPARENT": true,
             "MAXCC": 10,
