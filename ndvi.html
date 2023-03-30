@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sentinel 2A NDVI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+  <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+  <link rel="stylesheet" type="text/css" href="ndvi.css">
+</head>
+<body>
+    <header>
+        <h1>Sentinel 2A NDVI</h1>
+    </header>
+
+    <div id="datefilter">
+        <table>
+            <tr>
+                <td><lable for="date">Start Date:</lable></td>
+                <td><input type="date" id="startdate"></td>
+            </tr>
+            <tr>
+                <td><lable for="date">End Date:</lable></td>
+                <td><input type="date" id="enddate"></td>
+            </tr>
+            <tr>
+                <td><button onclick="ndvilayer()" >Submit</button></td>
+                <td><button onclick="reset()" >Reset</button></td>
+            </tr>
+    </table>
+    </div>
+
+    <div id="map" class="map" style="position: absolute;
+                                    overflow: hidden;
+                                    width:100%;
+                                    height:calc(100% - 85px);
+                                    touch-action:none;"></div>
+    <script src="ndvi.js"> </script>
+</body>
+</html>
