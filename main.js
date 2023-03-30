@@ -56,6 +56,7 @@ map.addLayer(nadvi_layer);
 
 function reset(){
     map.removeLayer(nadvi_layer);
+    vectorsource.clear();
     map.getView().setZoom(8);
     map.getView().setCenter([8076488.327293, 2659225.151755]);
 }
