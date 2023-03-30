@@ -23,7 +23,7 @@ var draw = new ol.interaction.Draw({
 
 map.addInteraction(draw);
 
-var polygon, bbox, NDVILAYER, startdate, enddate;
+var polygon, bbox, nadvi_layer, startdate, enddate;
 draw.on('drawend', function(event) {
     var feature = event.feature;
     polygon = feature.getGeometry().getExtent();
@@ -35,7 +35,7 @@ function ndvilayer() {
     
     var SHUB_INSTANCE_ID = "Enter ID"; //As per the API documentation here, I am not mentioning the code because of credentials privacy.  
 
-      NDVILAYER = new ol.layer.Tile({
+      nadvi_layer = new ol.layer.Tile({
         source: new ol.source.TileWMS({
         url: `https://services.sentinel-hub.com/ogc/wms/${SHUB_INSTANCE_ID}`,
         params: {
@@ -51,11 +51,11 @@ function ndvilayer() {
     opacity: 1,
     title: "Sentinel_NDVI"
 });
-map.addLayer(NDVILAYER);
+map.addLayer(nadvi_layer);
 }
 
 function reset(){
-    map.removeLayer(NDVILAYER);
+    map.removeLayer(nadvi_layer);
     map.getView().setZoom(8);
     map.getView().setCenter([8076488.327293, 2659225.151755]);
 }
