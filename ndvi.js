@@ -33,7 +33,7 @@ function ndvilayer() {
     startdate = document.getElementById('startdate').value;
     enddate = document.getElementById('enddate').value;
     
-    var SHUB_INSTANCE_ID = "Enter ID"; // As per the API documentation here I not mention the code because of credentials privacy. 
+    var SHUB_INSTANCE_ID = "Enter ID"; //As per the API documentation here, I am not mentioning the code because of credentials privacy.  
 
       NDVILAYER = new ol.layer.Tile({
         source: new ol.source.TileWMS({
