@@ -1,6 +1,6 @@
 # Sentinel HUB API Integration with Openlayers
 
-Insatll Openlayers: https://openlayers.org/download/
+Openlayers: https://openlayers.org/download/
 
 OpenLayers Workshop: https://openlayers.org/workshop/en/
 
