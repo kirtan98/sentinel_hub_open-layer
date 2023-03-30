@@ -1,1 +1,1 @@
-# Sentinel HUB API INtegration with Openlayers
+# Sentinel HUB API Integration with Openlayers
