@@ -22,15 +22,15 @@ var draw = new ol.interaction.Draw({
 
 map.addInteraction(draw);
 
-var polygon, bbox, nadvi_layer, startdate, enddate;
+var polygon, nadvi_layer;
 draw.on('drawend', function(event) {
     var feature = event.feature;
     polygon = feature.getGeometry().getExtent();
 });
 
 function ndvilayer() {
-    startdate = document.getElementById('startdate').value;
-    enddate = document.getElementById('enddate').value;
+    var startdate = document.getElementById('startdate').value;
+    var enddate = document.getElementById('enddate').value;
     
     var SHUB_INSTANCE_ID = "Enter_ID"; // I am not mentioning the credentials because of privacy.  
 
